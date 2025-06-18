@@ -11,3 +11,11 @@
 ![image](https://github.com/user-attachments/assets/4c77508d-a2fc-49e7-83f1-451f553da10d)
 
 
+# Troubleshooting
+
+If a cube in the grid appears stuck or not reacting:
+
+- Try increasing the `fftSize` parameter in the code in script.js:
+```
+  analyser = new THREE.AudioAnalyser(sound, 64); // try 128 or 256
+```
