@@ -35,11 +35,11 @@ function init() {
   }
 
   // Lights Scene
-  scene.add(new THREE.HemisphereLight(0xffd1a4, 0xff5733, 1.2)); 
+  //scene.add(new THREE.HemisphereLight(0xffd1a4, 0xff5733, 1.2)); 
 
   // Other lighting options I had fun trying (some lighting might break!)
   // scene.add(new THREE.PointLight(0xfaeae05454, 100, 100));
-  // scene.add(new THREE.SpotLight(0x3affcc, 3.2, 200, Math.PI / 3));
+   scene.add(new THREE.SpotLight(0x3affcc, 3.2, 200, Math.PI / 3));
   // scene.add(new THREE.DirectionalLight(0xffffff, 13));
 
   // Scene Audio Listener
