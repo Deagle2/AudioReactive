@@ -39,8 +39,8 @@ function init() {
 
   // Other lighting options I had fun trying (some lighting might break!)
   // scene.add(new THREE.PointLight(0xfaeae05454, 100, 100));
-   scene.add(new THREE.SpotLight(0x3affcc, 3.2, 200, Math.PI / 3));
-  // scene.add(new THREE.DirectionalLight(0xffffff, 13));
+   //scene.add(new THREE.SpotLight(0x3affcc, 3.2, 200, Math.PI / 3));
+   scene.add(new THREE.DirectionalLight(0xffffff, 13));
 
   // Scene Audio Listener
   const listener = new THREE.AudioListener(); 
@@ -69,7 +69,7 @@ function init() {
     sound.setVolume(0.6);
     sound.play();
 
-    analyser = new THREE.AudioAnalyser(sound, 64); // Use higher fftSize (like 128 or 256) if some cubes don’t respond due to low amplitude
+    analyser = new THREE.AudioAnalyser(sound, 128); // Use higher fftSize (like 128 or 256) if some cubes don’t respond due to low amplitude; ^4 - Original
     console.log('Audio file loaded and playing');
     document.getElementById('info').textContent = 'Audio file playing, processing audio...';
     animate();
