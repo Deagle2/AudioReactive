@@ -63,7 +63,7 @@ function init() {
 
   // Song Selection & Analyser setup
   const audioLoader = new THREE.AudioLoader();
-  audioLoader.load('audio/HURR.mp3', (buffer) => {
+  audioLoader.load('audio/Crysta-NCS.mp3', (buffer) => {
     sound.setBuffer(buffer);
     sound.setLoop(true);
     sound.setVolume(0.6);
