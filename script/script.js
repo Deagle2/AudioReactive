@@ -123,7 +123,7 @@ function init() {
         cubes[i].position.y = height;
         cubes[i].material.color.setHSL(data[freqIndex] / 255, 1, 0.5);
       }
-      document.getElementById('info').textContent = `Audio active, avg frequency: ${(data.reduce((a, b) => a + b, 0) / data.length).toFixed(2)}`;
+      document.getElementById('info').textContent = `Audio active, avg Amplitude: ${(data.reduce((a, b) => a + b, 0) / data.length).toFixed(2)}`;
     } else {
       for (let i = 0; i < cubes.length; i++) {
         cubes[i].position.y = Math.sin(Date.now() * 0.001 + i) * 0.5;
