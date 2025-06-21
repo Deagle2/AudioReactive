@@ -102,6 +102,16 @@ function init() {
     targetRotationY = (mouseX / window.innerWidth - 0.5) * 2 * maxRotation;
     targetRotationX = (mouseY / window.innerHeight - 0.5) * 2 * maxRotation;
   });
+  let cursorTimeout;
+
+document.addEventListener('mousemove', () => {
+  
+  document.body.style.cursor = 'none';
+  clearTimeout(cursorTimeout);
+  cursorTimeout = setTimeout(() => {
+    document.body.style.cursor = 'default';
+  }, 1500);
+});
 
   // Window Management
   window.addEventListener('resize', () => {
